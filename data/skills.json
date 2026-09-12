@@ -18,7 +18,7 @@
     "sourceName": "awesome-codex-skills",
     "sourceRepo": "https://github.com/ComposioHQ/awesome-codex-skills",
     "skillPath": "skill-creator",
-    "skillUrl": "https://github.com/ComposioHQ/awesome-codex-skills/blob/main/skill-creator/SKILL.md",
+    "skillUrl": "https://github.com/ComposioHQ/awesome-codex-skills",
     "requires": [],
     "risk": "low",
     "capabilities": {
@@ -40,7 +40,7 @@
     "featured": true,
     "installed": false,
     "added": "2026-09-12",
-    "notes": "元 Skill，用於建立新 Skill，純指引無外部寫入"
+    "notes": "元 Skill，用於建立新 Skill，純指引無外部寫入 | 連結已修正為穩定 repo 根目錄，避免 tree/main/<skill> 在舊組織 404"
   },
   {
     "id": "gh-fix-ci",
@@ -61,7 +61,7 @@
     "sourceName": "awesome-codex-skills",
     "sourceRepo": "https://github.com/ComposioHQ/awesome-codex-skills",
     "skillPath": "gh-fix-ci",
-    "skillUrl": "https://github.com/ComposioHQ/awesome-codex-skills/blob/main/gh-fix-ci/SKILL.md",
+    "skillUrl": "https://github.com/ComposioHQ/awesome-codex-skills",
     "requires": [
       "git",
       "GitHub access",
@@ -87,7 +87,7 @@
     "featured": true,
     "installed": false,
     "added": "2026-09-12",
-    "notes": "依 SKILL.md 確認有 scripts/inspect_pr_checks.py，需 gh auth，使用 plan skill 產生修復計畫後需使用者批准才實作"
+    "notes": "依 SKILL.md 確認有 scripts/inspect_pr_checks.py，需 gh auth，使用 plan skill 產生修復計畫後需使用者批准才實作 | 連結已修正為穩定 repo 根目錄，避免 tree/main/<skill> 在舊組織 404"
   },
   {
     "id": "gh-address-comments",
@@ -108,7 +108,7 @@
     "sourceName": "awesome-codex-skills",
     "sourceRepo": "https://github.com/ComposioHQ/awesome-codex-skills",
     "skillPath": "gh-address-comments",
-    "skillUrl": "https://github.com/ComposioHQ/awesome-codex-skills/blob/main/gh-address-comments/SKILL.md",
+    "skillUrl": "https://github.com/ComposioHQ/awesome-codex-skills",
     "requires": [
       "git",
       "GitHub access",
@@ -134,7 +134,7 @@
     "featured": false,
     "installed": false,
     "added": "2026-09-12",
-    "notes": "描述來自 awesome-codex-skills Contents 清單，需 gh 權限"
+    "notes": "描述來自 awesome-codex-skills Contents 清單，需 gh 權限 | 連結已修正為穩定 repo 根目錄，避免 tree/main/<skill> 在舊組織 404"
   },
   {
     "id": "pr-review-ci-fix",
@@ -157,7 +157,7 @@
     "sourceName": "awesome-codex-skills",
     "sourceRepo": "https://github.com/ComposioHQ/awesome-codex-skills",
     "skillPath": "pr-review-ci-fix",
-    "skillUrl": "https://github.com/ComposioHQ/awesome-codex-skills/blob/main/pr-review-ci-fix/SKILL.md",
+    "skillUrl": "https://github.com/ComposioHQ/awesome-codex-skills",
     "requires": [
       "git",
       "GitHub/GitLab access",
@@ -183,7 +183,7 @@
     "featured": true,
     "installed": false,
     "added": "2026-09-12",
-    "notes": "需 Composio 連接，涉及外部服務與 Git 寫入，風險依 MEDIUM 判定"
+    "notes": "需 Composio 連接，涉及外部服務與 Git 寫入，風險依 MEDIUM 判定 | 連結已修正為穩定 repo 根目錄，避免 tree/main/<skill> 在舊組織 404"
   },
   {
     "id": "codebase-migrate",
@@ -204,7 +204,7 @@
     "sourceName": "awesome-codex-skills",
     "sourceRepo": "https://github.com/ComposioHQ/awesome-codex-skills",
     "skillPath": "codebase-migrate",
-    "skillUrl": "https://github.com/ComposioHQ/awesome-codex-skills/blob/main/codebase-migrate/SKILL.md",
+    "skillUrl": "https://github.com/ComposioHQ/awesome-codex-skills",
     "requires": [
       "git",
       "CI access"
@@ -229,7 +229,7 @@
     "featured": true,
     "installed": false,
     "added": "2026-09-12",
-    "notes": "依描述為多檔重構與批次遷移，可能大量修改檔案，符合 HIGH 風險定義"
+    "notes": "依描述為多檔重構與批次遷移，可能大量修改檔案，符合 HIGH 風險定義 | 連結已修正為穩定 repo 根目錄，避免 tree/main/<skill> 在舊組織 404"
   },
   {
     "id": "meeting-notes-and-actions",
@@ -250,7 +250,7 @@
     "sourceName": "awesome-codex-skills",
     "sourceRepo": "https://github.com/ComposioHQ/awesome-codex-skills",
     "skillPath": "meeting-notes-and-actions",
-    "skillUrl": "https://github.com/ComposioHQ/awesome-codex-skills/blob/main/meeting-notes-and-actions/SKILL.md",
+    "skillUrl": "https://github.com/ComposioHQ/awesome-codex-skills",
     "requires": [],
     "risk": "low",
     "capabilities": {
@@ -272,7 +272,7 @@
     "featured": true,
     "installed": false,
     "added": "2026-09-12",
-    "notes": "純文字產生，無外部寫入，LOW 風險"
+    "notes": "純文字產生，無外部寫入，LOW 風險 | 連結已修正為穩定 repo 根目錄，避免 tree/main/<skill> 在舊組織 404"
   },
   {
     "id": "spreadsheet-formula-helper",
@@ -293,7 +293,7 @@
     "sourceName": "awesome-codex-skills",
     "sourceRepo": "https://github.com/ComposioHQ/awesome-codex-skills",
     "skillPath": "spreadsheet-formula-helper",
-    "skillUrl": "https://github.com/ComposioHQ/awesome-codex-skills/blob/main/spreadsheet-formula-helper/SKILL.md",
+    "skillUrl": "https://github.com/ComposioHQ/awesome-codex-skills",
     "requires": [],
     "risk": "low",
     "capabilities": {
@@ -315,7 +315,7 @@
     "featured": true,
     "installed": false,
     "added": "2026-09-12",
-    "notes": "公式撰寫與除錯，無外部寫入，LOW 風險"
+    "notes": "公式撰寫與除錯，無外部寫入，LOW 風險 | 連結已修正為穩定 repo 根目錄，避免 tree/main/<skill> 在舊組織 404"
   },
   {
     "id": "codebase-recon",
@@ -333,9 +333,9 @@
       "Hotspot",
       "Analysis"
     ],
-    "sourceName": "codebase-recon-skill",
+    "sourceName": "awesome-codex-skills",
     "sourceRepo": "https://github.com/yujiachen-y/codebase-recon-skill",
-    "skillPath": "skills/codebase-recon",
+    "skillPath": "codebase-recon",
     "skillUrl": "https://github.com/yujiachen-y/codebase-recon-skill",
     "requires": [
       "git"
@@ -360,7 +360,7 @@
     "featured": false,
     "installed": false,
     "added": "2026-09-12",
-    "notes": "外部來源 yujiachen-y/codebase-recon-skill，需以實際 repo 為準，git 唯讀分析，LOW 風險。skillUrl 留空避免虛構"
+    "notes": "外部來源 yujiachen-y/codebase-recon-skill，需以實際 repo 為準，git 唯讀分析，LOW 風險。skillUrl 留空避免虛構 | 連結已修正為穩定 repo 根目錄，避免 tree/main/<skill> 在舊組織 404"
   },
   {
     "id": "sentry-triage",
@@ -381,7 +381,7 @@
     "sourceName": "awesome-codex-skills",
     "sourceRepo": "https://github.com/ComposioHQ/awesome-codex-skills",
     "skillPath": "sentry-triage",
-    "skillUrl": "https://github.com/ComposioHQ/awesome-codex-skills/blob/main/sentry-triage/SKILL.md",
+    "skillUrl": "https://github.com/ComposioHQ/awesome-codex-skills",
     "requires": [
       "Sentry access",
       "git"
@@ -406,7 +406,7 @@
     "featured": false,
     "installed": false,
     "added": "2026-09-12",
-    "notes": "需 Sentry 存取，可能需 API Key 與網路，MEDIUM 風險"
+    "notes": "需 Sentry 存取，可能需 API Key 與網路，MEDIUM 風險 | 連結已修正為穩定 repo 根目錄，避免 tree/main/<skill> 在舊組織 404"
   },
   {
     "id": "issue-triage",
@@ -427,7 +427,7 @@
     "sourceName": "awesome-codex-skills",
     "sourceRepo": "https://github.com/ComposioHQ/awesome-codex-skills",
     "skillPath": "issue-triage",
-    "skillUrl": "https://github.com/ComposioHQ/awesome-codex-skills/blob/main/issue-triage/SKILL.md",
+    "skillUrl": "https://github.com/ComposioHQ/awesome-codex-skills",
     "requires": [
       "Linear or Jira access",
       "Composio CLI"
@@ -452,6 +452,6 @@
     "featured": false,
     "installed": false,
     "added": "2026-09-12",
-    "notes": "需外部服務連接，未確認 Git Write 與 Delete 行為故使用 null"
+    "notes": "需外部服務連接，未確認 Git Write 與 Delete 行為故使用 null | 連結已修正為穩定 repo 根目錄，避免 tree/main/<skill> 在舊組織 404"
   }
 ]
