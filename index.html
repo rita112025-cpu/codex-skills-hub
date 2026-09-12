@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Codex Skills Hub</title>
+<meta name="description" content="搜尋、比較與管理可重用的 Codex Skills，需要時再安裝，不把所有 workflow 塞進環境">
+<meta property="og:title" content="Codex Skills Hub">
+<meta property="og:description" content="Codex Skill Registry / Personal Skill Navigator - Find, Understand, Review, Install when needed">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header id="site-header" role="banner">
+  <div class="container header-inner">
+    <div class="brand" aria-label="Codex Skills Hub">
+      <span class="brand-mark">▲</span>
+      <span class="brand-text">Codex Skills Hub</span>
+    </div>
+    <nav class="header-nav" aria-label="主導航">
+      <a href="#home" class="nav-link">首頁</a>
+      <a href="#skills-section" class="nav-link">Skills</a>
+      <a href="#featured" class="nav-link">精選</a>
+      <a href="#my-skills" class="nav-link">我的 Skills</a>
+      <a href="#sources" class="nav-link">來源</a>
+      <a href="https://github.com/ComposioHQ/awesome-codex-skills" target="_blank" rel="noopener noreferrer" class="nav-link github-link">GitHub</a>
+      <button id="themeToggle" class="icon-btn" aria-label="切換深淺色模式">◐</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section id="home" class="hero">
+    <div class="container">
+      <h1 class="hero-title">Codex Skills Hub</h1>
+      <p class="hero-subtitle">搜尋、比較與管理可重用的 Codex Skills<br>需要時再安裝，不把所有 workflow 塞進環境</p>
+      <div class="search-wrap">
+        <label for="searchInput" class="sr-only">搜尋 Skill</label>
+        <input id="searchInput" type="search" placeholder="搜尋 GitHub、CI、PR、Excel、Meeting、Security..." autocomplete="off" spellcheck="false">
+        <span class="search-icon" aria-hidden="true">⌕</span>
+      </div>
+      <div class="search-meta">
+        <span id="resultCount" aria-live="polite">載入中...</span>
+        <button id="clearFiltersBtn2" class="link-btn">清除篩選</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="filters" class="filters container" aria-label="篩選區">
+    <div class="filter-block">
+      <h2 class="filter-title">快速分類</h2>
+      <div id="categoryFilters" class="chip-group" role="group" aria-label="分類"></div>
+    </div>
+    <div class="filter-block">
+      <h2 class="filter-title">工作用途</h2>
+      <div id="useCaseFilters" class="chip-group" role="group" aria-label="用途"></div>
+    </div>
+    <div class="filter-block">
+      <div class="filter-header-row">
+        <h2 class="filter-title">風險等級</h2>
+      </div>
+      <div id="riskFilters" class="chip-group" role="group" aria-label="風險"></div>
+    </div>
+    <div class="filter-block">
+      <div class="filter-header-row">
+        <h2 class="filter-title">依賴 / 權限</h2>
+        <button id="toggleDepsBtn" class="link-btn small">顯示全部</button>
+      </div>
+      <div id="dependencyFilters" class="chip-group" role="group" aria-label="依賴"></div>
+    </div>
+    <div class="filter-block">
+      <div class="filter-header-row">
+        <h2 class="filter-title">熱門標籤</h2>
+        <button id="toggleTagsBtn" class="link-btn small">顯示全部</button>
+      </div>
+      <div id="tagFilters" class="chip-group tags collapsed" role="group" aria-label="標籤"></div>
+    </div>
+    <div class="filter-actions">
+      <div class="action-left">
+        <label for="sortSelect" class="sr-only">排序</label>
+        <select id="sortSelect" class="select">
+          <option value="featured">精選優先</option>
+          <option value="name">名稱 A-Z</option>
+          <option value="newest">最新加入</option>
+          <option value="risk">風險低 → 高</option>
+        </select>
+        <button id="favoritesOnlyBtn" class="btn secondary" aria-pressed="false">☆ 只看收藏</button>
+        <button id="installedOnlyBtn" class="btn secondary" aria-pressed="false">◇ 只看已安裝</button>
+        <button id="clearFiltersBtn" class="btn secondary">清除篩選</button>
+      </div>
+      <div class="action-right">
+        <span class="hint">Find → Understand → Review → Install when needed</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills-section" class="section container">
+    <div id="errorState" class="state-card error" hidden role="alert">
+      <h3>Skill 資料載入失敗。</h3>
+      <p>請確認 <code>data/skills.json</code> 格式是否正確。</p>
+      <p class="muted">錯誤：<span id="errorMsg"></span></p>
+    </div>
+    <div id="skillGrid" class="grid"></div>
+    <div id="emptyState" class="state-card empty" hidden>
+      <h3>找不到符合條件的 Skill。</h3>
+      <ul>
+        <li>移除部分篩選</li>
+        <li>使用其他關鍵字</li>
+      </ul>
+      <button id="emptyClearBtn" class="btn">清除篩選</button>
+    </div>
+  </section>
+
+  <section id="featured" class="section container featured-section">
+    <div class="section-header">
+      <h2>我的精選</h2>
+      <p class="muted">只顯示 <code>featured: true</code> 的 Skill，值得優先研究的。</p>
+    </div>
+    <div id="featuredGrid" class="grid"></div>
+  </section>
+
+  <section id="my-skills" class="section container">
+    <div class="section-header">
+      <h2>我的 Skills</h2>
+      <p class="muted">收藏與手動標記已安裝的 Skill，儲存在瀏覽器 localStorage。UI 顯示為「手動標記已安裝」，並非偵測到已安裝。</p>
+    </div>
+    <div id="mySkillsGrid" class="grid"></div>
+    <div id="myEmptyState" class="state-card empty">
+      <p class="muted">尚未收藏或標記已安裝。點擊卡片上的 ☆ 收藏，或標記為已安裝。</p>
+    </div>
+  </section>
+
+  <section id="sources" class="section container">
+    <div class="section-header">
+      <h2>來源與安全說明</h2>
+    </div>
+    <div class="source-card">
+      <p><strong>Codex Skills Hub 是導航與索引網站，本身不會自動安裝 Skill。</strong></p>
+      <ul>
+        <li>資料主要整理自 <code>ComposioHQ/awesome-codex-skills</code>，僅整理名稱、分類、用途、風險與依賴，完整實作請查看原 repo 的 <code>SKILL.md</code> 與 <code>scripts/</code>。</li>
+        <li>網站顯示的安全資訊只是依公開 repository 及 Skill 內容整理，不代表完整安全稽核。</li>
+        <li>安裝第三方 Skill 前，仍應自行查看 <code>SKILL.md</code>、<code>scripts</code> 與相關權限，確認是否包含 <code>git write / delete / network / API Key / MCP</code> 等操作。</li>
+        <li>安裝方式為複製指令後貼到終端機自行執行，不會在網頁內執行 Shell。</li>
+        <li>未確認欄位標示為 <code>null</code> 或 <code>未確認</code>，不會把未查到寫成沒有。</li>
+      </ul>
+      <p>
+        <a href="https://github.com/ComposioHQ/awesome-codex-skills" target="_blank" rel="noopener noreferrer" class="btn">前往 awesome-codex-skills</a>
+        <a href="https://github.com/rita112025-cpu/astra-3d-resource-hub" target="_blank" rel="noopener noreferrer" class="btn secondary">參考 Astra Hub 架構</a>
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer" class="footer">
+  <div class="container footer-inner">
+    <div>
+      <strong>Codex Skills Hub</strong>
+      <p class="muted">Find → Understand → Review → Install when needed</p>
+      <p class="muted">Data sources belong to their respective authors.</p>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/ComposioHQ/awesome-codex-skills" target="_blank" rel="noopener noreferrer">awesome-codex-skills</a>
+      <a href="#home">回到頂部 ↑</a>
+    </div>
+  </div>
+</footer>
+
+<div id="toast" class="toast" role="status" aria-live="polite" hidden>已複製</div>
+
+<script src="./app.js" type="module"></script>
+</body>
+</html>

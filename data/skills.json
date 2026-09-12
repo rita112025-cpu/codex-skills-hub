@@ -1,0 +1,457 @@
+[
+  {
+    "id": "skill-creator",
+    "name": "skill-creator",
+    "title": "Skill 建立指南",
+    "category": "Skill Development",
+    "useCase": [
+      "建立 Skill",
+      "整理文件"
+    ],
+    "description": "提供建立高效 Codex Skill 的指引，包含 SKILL.md 模板、scripts 與 references 的 progressive disclosure 組織方式。",
+    "tags": [
+      "Skill",
+      "Codex",
+      "Documentation",
+      "Template"
+    ],
+    "sourceName": "awesome-codex-skills",
+    "sourceRepo": "https://github.com/ComposioHQ/awesome-codex-skills",
+    "skillPath": "skill-creator",
+    "skillUrl": "https://github.com/ComposioHQ/awesome-codex-skills/tree/main/skill-creator",
+    "requires": [],
+    "risk": "low",
+    "capabilities": {
+      "scripts": false,
+      "shell": false,
+      "network": false,
+      "apiKey": false,
+      "mcp": false,
+      "gitWrite": false,
+      "deleteFiles": false,
+      "externalService": false
+    },
+    "safety": {
+      "hasTests": null,
+      "hasDryRun": null,
+      "reviewed": false
+    },
+    "installCommand": "python skill-installer/scripts/install-skill-from-github.py --repo ComposioHQ/awesome-codex-skills --path skill-creator",
+    "featured": true,
+    "installed": false,
+    "added": "2026-09-12",
+    "notes": "元 Skill，用於建立新 Skill，純指引無外部寫入"
+  },
+  {
+    "id": "gh-fix-ci",
+    "name": "gh-fix-ci",
+    "title": "GitHub CI 修復",
+    "category": "CI / Debug",
+    "useCase": [
+      "修 CI",
+      "分析錯誤"
+    ],
+    "description": "檢查 GitHub PR 的 failing checks，拉取 GitHub Actions log，摘要失敗原因，並在使用者確認後建立修復方案。",
+    "tags": [
+      "GitHub",
+      "CI",
+      "Actions",
+      "gh"
+    ],
+    "sourceName": "awesome-codex-skills",
+    "sourceRepo": "https://github.com/ComposioHQ/awesome-codex-skills",
+    "skillPath": "gh-fix-ci",
+    "skillUrl": "https://github.com/ComposioHQ/awesome-codex-skills/tree/main/gh-fix-ci",
+    "requires": [
+      "git",
+      "GitHub access",
+      "gh CLI"
+    ],
+    "risk": "medium",
+    "capabilities": {
+      "scripts": true,
+      "shell": true,
+      "network": true,
+      "apiKey": false,
+      "mcp": false,
+      "gitWrite": true,
+      "deleteFiles": false,
+      "externalService": true
+    },
+    "safety": {
+      "hasTests": null,
+      "hasDryRun": true,
+      "reviewed": false
+    },
+    "installCommand": "python skill-installer/scripts/install-skill-from-github.py --repo ComposioHQ/awesome-codex-skills --path gh-fix-ci",
+    "featured": true,
+    "installed": false,
+    "added": "2026-09-12",
+    "notes": "依 SKILL.md 確認有 scripts/inspect_pr_checks.py，需 gh auth，使用 plan skill 產生修復計畫後需使用者批准才實作"
+  },
+  {
+    "id": "gh-address-comments",
+    "name": "gh-address-comments",
+    "title": "PR 留言處理",
+    "category": "GitHub / PR",
+    "useCase": [
+      "審 PR",
+      "整理文件"
+    ],
+    "description": "處理當前分支開啟 PR 上的 review 或 issue 留言，使用 gh 定位並協助回應與修復。",
+    "tags": [
+      "GitHub",
+      "PR",
+      "Review",
+      "gh"
+    ],
+    "sourceName": "awesome-codex-skills",
+    "sourceRepo": "https://github.com/ComposioHQ/awesome-codex-skills",
+    "skillPath": "gh-address-comments",
+    "skillUrl": "https://github.com/ComposioHQ/awesome-codex-skills/tree/main/gh-address-comments",
+    "requires": [
+      "git",
+      "GitHub access",
+      "gh CLI"
+    ],
+    "risk": "medium",
+    "capabilities": {
+      "scripts": null,
+      "shell": true,
+      "network": true,
+      "apiKey": false,
+      "mcp": false,
+      "gitWrite": true,
+      "deleteFiles": false,
+      "externalService": true
+    },
+    "safety": {
+      "hasTests": null,
+      "hasDryRun": null,
+      "reviewed": false
+    },
+    "installCommand": "python skill-installer/scripts/install-skill-from-github.py --repo ComposioHQ/awesome-codex-skills --path gh-address-comments",
+    "featured": false,
+    "installed": false,
+    "added": "2026-09-12",
+    "notes": "描述來自 awesome-codex-skills Contents 清單，需 gh 權限"
+  },
+  {
+    "id": "pr-review-ci-fix",
+    "name": "pr-review-ci-fix",
+    "title": "PR 審查與 CI 自動修復",
+    "category": "GitHub / PR",
+    "useCase": [
+      "審 PR",
+      "修 CI",
+      "分析錯誤"
+    ],
+    "description": "透過 Composio CLI 進行 GitHub/GitLab PR 自動審查，並進入 CI 自動修復循環。",
+    "tags": [
+      "GitHub",
+      "GitLab",
+      "PR",
+      "CI",
+      "Composio"
+    ],
+    "sourceName": "awesome-codex-skills",
+    "sourceRepo": "https://github.com/ComposioHQ/awesome-codex-skills",
+    "skillPath": "pr-review-ci-fix",
+    "skillUrl": "https://github.com/ComposioHQ/awesome-codex-skills/tree/main/pr-review-ci-fix",
+    "requires": [
+      "git",
+      "GitHub/GitLab access",
+      "Composio CLI"
+    ],
+    "risk": "medium",
+    "capabilities": {
+      "scripts": null,
+      "shell": true,
+      "network": true,
+      "apiKey": true,
+      "mcp": false,
+      "gitWrite": true,
+      "deleteFiles": null,
+      "externalService": true
+    },
+    "safety": {
+      "hasTests": null,
+      "hasDryRun": null,
+      "reviewed": false
+    },
+    "installCommand": "python skill-installer/scripts/install-skill-from-github.py --repo ComposioHQ/awesome-codex-skills --path pr-review-ci-fix",
+    "featured": true,
+    "installed": false,
+    "added": "2026-09-12",
+    "notes": "需 Composio 連接，涉及外部服務與 Git 寫入，風險依 MEDIUM 判定"
+  },
+  {
+    "id": "codebase-migrate",
+    "name": "codebase-migrate",
+    "title": "大型程式碼遷移",
+    "category": "Code Migration",
+    "useCase": [
+      "程式遷移",
+      "重構"
+    ],
+    "description": "執行大型程式碼遷移與多檔重構，拆成可審查批次並透過 CI 驗證。",
+    "tags": [
+      "Migration",
+      "Refactor",
+      "CI",
+      "Batch"
+    ],
+    "sourceName": "awesome-codex-skills",
+    "sourceRepo": "https://github.com/ComposioHQ/awesome-codex-skills",
+    "skillPath": "codebase-migrate",
+    "skillUrl": "https://github.com/ComposioHQ/awesome-codex-skills/tree/main/codebase-migrate",
+    "requires": [
+      "git",
+      "CI access"
+    ],
+    "risk": "high",
+    "capabilities": {
+      "scripts": true,
+      "shell": true,
+      "network": null,
+      "apiKey": null,
+      "mcp": null,
+      "gitWrite": true,
+      "deleteFiles": true,
+      "externalService": false
+    },
+    "safety": {
+      "hasTests": null,
+      "hasDryRun": null,
+      "reviewed": false
+    },
+    "installCommand": "python skill-installer/scripts/install-skill-from-github.py --repo ComposioHQ/awesome-codex-skills --path codebase-migrate",
+    "featured": true,
+    "installed": false,
+    "added": "2026-09-12",
+    "notes": "依描述為多檔重構與批次遷移，可能大量修改檔案，符合 HIGH 風險定義"
+  },
+  {
+    "id": "meeting-notes-and-actions",
+    "name": "meeting-notes-and-actions",
+    "title": "會議紀錄與待辦",
+    "category": "Meeting",
+    "useCase": [
+      "會議紀錄",
+      "整理文件"
+    ],
+    "description": "將會議逐字稿轉成含決策與負責人標註待辦事項的摘要。",
+    "tags": [
+      "Meeting",
+      "Notes",
+      "Transcript",
+      "Productivity"
+    ],
+    "sourceName": "awesome-codex-skills",
+    "sourceRepo": "https://github.com/ComposioHQ/awesome-codex-skills",
+    "skillPath": "meeting-notes-and-actions",
+    "skillUrl": "https://github.com/ComposioHQ/awesome-codex-skills/tree/main/meeting-notes-and-actions",
+    "requires": [],
+    "risk": "low",
+    "capabilities": {
+      "scripts": false,
+      "shell": false,
+      "network": false,
+      "apiKey": false,
+      "mcp": false,
+      "gitWrite": false,
+      "deleteFiles": false,
+      "externalService": false
+    },
+    "safety": {
+      "hasTests": null,
+      "hasDryRun": null,
+      "reviewed": false
+    },
+    "installCommand": "python skill-installer/scripts/install-skill-from-github.py --repo ComposioHQ/awesome-codex-skills --path meeting-notes-and-actions",
+    "featured": true,
+    "installed": false,
+    "added": "2026-09-12",
+    "notes": "純文字產生，無外部寫入，LOW 風險"
+  },
+  {
+    "id": "spreadsheet-formula-helper",
+    "name": "spreadsheet-formula-helper",
+    "title": "試算表公式助手",
+    "category": "Spreadsheet / Data",
+    "useCase": [
+      "處理 Excel",
+      "資料分析"
+    ],
+    "description": "撰寫與除錯試算表公式、樞紐與陣列公式。",
+    "tags": [
+      "Excel",
+      "Spreadsheet",
+      "Formula",
+      "Data"
+    ],
+    "sourceName": "awesome-codex-skills",
+    "sourceRepo": "https://github.com/ComposioHQ/awesome-codex-skills",
+    "skillPath": "spreadsheet-formula-helper",
+    "skillUrl": "https://github.com/ComposioHQ/awesome-codex-skills/tree/main/spreadsheet-formula-helper",
+    "requires": [],
+    "risk": "low",
+    "capabilities": {
+      "scripts": false,
+      "shell": false,
+      "network": false,
+      "apiKey": false,
+      "mcp": false,
+      "gitWrite": false,
+      "deleteFiles": false,
+      "externalService": false
+    },
+    "safety": {
+      "hasTests": null,
+      "hasDryRun": null,
+      "reviewed": false
+    },
+    "installCommand": "python skill-installer/scripts/install-skill-from-github.py --repo ComposioHQ/awesome-codex-skills --path spreadsheet-formula-helper",
+    "featured": true,
+    "installed": false,
+    "added": "2026-09-12",
+    "notes": "公式撰寫與除錯，無外部寫入，LOW 風險"
+  },
+  {
+    "id": "codebase-recon",
+    "name": "codebase-recon",
+    "title": "程式碼庫偵查",
+    "category": "Research",
+    "useCase": [
+      "研究",
+      "分析錯誤"
+    ],
+    "description": "分析 git history 以了解程式碼庫熱點、bug 磁鐵、bus factor、動能與高風險檔案。",
+    "tags": [
+      "Git",
+      "Research",
+      "Hotspot",
+      "Analysis"
+    ],
+    "sourceName": "awesome-codex-skills",
+    "sourceRepo": "https://github.com/ComposioHQ/awesome-codex-skills",
+    "skillPath": "codebase-recon",
+    "skillUrl": "",
+    "requires": [
+      "git"
+    ],
+    "risk": "low",
+    "capabilities": {
+      "scripts": true,
+      "shell": true,
+      "network": false,
+      "apiKey": false,
+      "mcp": false,
+      "gitWrite": false,
+      "deleteFiles": false,
+      "externalService": false
+    },
+    "safety": {
+      "hasTests": null,
+      "hasDryRun": null,
+      "reviewed": false
+    },
+    "installCommand": "python ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py --repo yujiachen-y/codebase-recon-skill --path skills/codebase-recon --name codebase-recon",
+    "featured": false,
+    "installed": false,
+    "added": "2026-09-12",
+    "notes": "外部來源 yujiachen-y/codebase-recon-skill，需以實際 repo 為準，git 唯讀分析，LOW 風險。skillUrl 留空避免虛構"
+  },
+  {
+    "id": "sentry-triage",
+    "name": "sentry-triage",
+    "title": "Sentry 錯誤分流",
+    "category": "CI / Debug",
+    "useCase": [
+      "分析錯誤",
+      "修 CI"
+    ],
+    "description": "透過對應 stack frames 到本地原始碼來診斷 Sentry issue，無需複製貼上。",
+    "tags": [
+      "Sentry",
+      "Debug",
+      "Triage",
+      "Error"
+    ],
+    "sourceName": "awesome-codex-skills",
+    "sourceRepo": "https://github.com/ComposioHQ/awesome-codex-skills",
+    "skillPath": "sentry-triage",
+    "skillUrl": "https://github.com/ComposioHQ/awesome-codex-skills/tree/main/sentry-triage",
+    "requires": [
+      "Sentry access",
+      "git"
+    ],
+    "risk": "medium",
+    "capabilities": {
+      "scripts": null,
+      "shell": null,
+      "network": true,
+      "apiKey": true,
+      "mcp": null,
+      "gitWrite": false,
+      "deleteFiles": false,
+      "externalService": true
+    },
+    "safety": {
+      "hasTests": null,
+      "hasDryRun": null,
+      "reviewed": false
+    },
+    "installCommand": "python skill-installer/scripts/install-skill-from-github.py --repo ComposioHQ/awesome-codex-skills --path sentry-triage",
+    "featured": false,
+    "installed": false,
+    "added": "2026-09-12",
+    "notes": "需 Sentry 存取，可能需 API Key 與網路，MEDIUM 風險"
+  },
+  {
+    "id": "issue-triage",
+    "name": "issue-triage",
+    "title": "Issue 分流助手",
+    "category": "Productivity",
+    "useCase": [
+      "日常自動化",
+      "分析錯誤"
+    ],
+    "description": "分流 Linear 或 Jira backlog 並從終端機執行 bug sweep。",
+    "tags": [
+      "Linear",
+      "Jira",
+      "Triage",
+      "Productivity"
+    ],
+    "sourceName": "awesome-codex-skills",
+    "sourceRepo": "https://github.com/ComposioHQ/awesome-codex-skills",
+    "skillPath": "issue-triage",
+    "skillUrl": "https://github.com/ComposioHQ/awesome-codex-skills/tree/main/issue-triage",
+    "requires": [
+      "Linear or Jira access",
+      "Composio CLI"
+    ],
+    "risk": "medium",
+    "capabilities": {
+      "scripts": null,
+      "shell": true,
+      "network": true,
+      "apiKey": true,
+      "mcp": null,
+      "gitWrite": null,
+      "deleteFiles": null,
+      "externalService": true
+    },
+    "safety": {
+      "hasTests": null,
+      "hasDryRun": null,
+      "reviewed": false
+    },
+    "installCommand": "python skill-installer/scripts/install-skill-from-github.py --repo ComposioHQ/awesome-codex-skills --path issue-triage",
+    "featured": false,
+    "installed": false,
+    "added": "2026-09-12",
+    "notes": "需外部服務連接，未確認 Git Write 與 Delete 行為故使用 null"
+  }
+]
