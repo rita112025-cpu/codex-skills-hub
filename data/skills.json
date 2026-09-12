@@ -18,7 +18,7 @@
     "sourceName": "awesome-codex-skills",
     "sourceRepo": "https://github.com/ComposioHQ/awesome-codex-skills",
     "skillPath": "skill-creator",
-    "skillUrl": "https://github.com/ComposioHQ/awesome-codex-skills/tree/main/skill-creator",
+    "skillUrl": "https://github.com/ComposioHQ/awesome-codex-skills/blob/main/skill-creator/SKILL.md",
     "requires": [],
     "risk": "low",
     "capabilities": {
@@ -61,7 +61,7 @@
     "sourceName": "awesome-codex-skills",
     "sourceRepo": "https://github.com/ComposioHQ/awesome-codex-skills",
     "skillPath": "gh-fix-ci",
-    "skillUrl": "https://github.com/ComposioHQ/awesome-codex-skills/tree/main/gh-fix-ci",
+    "skillUrl": "https://github.com/ComposioHQ/awesome-codex-skills/blob/main/gh-fix-ci/SKILL.md",
     "requires": [
       "git",
       "GitHub access",
@@ -108,7 +108,7 @@
     "sourceName": "awesome-codex-skills",
     "sourceRepo": "https://github.com/ComposioHQ/awesome-codex-skills",
     "skillPath": "gh-address-comments",
-    "skillUrl": "https://github.com/ComposioHQ/awesome-codex-skills/tree/main/gh-address-comments",
+    "skillUrl": "https://github.com/ComposioHQ/awesome-codex-skills/blob/main/gh-address-comments/SKILL.md",
     "requires": [
       "git",
       "GitHub access",
@@ -157,7 +157,7 @@
     "sourceName": "awesome-codex-skills",
     "sourceRepo": "https://github.com/ComposioHQ/awesome-codex-skills",
     "skillPath": "pr-review-ci-fix",
-    "skillUrl": "https://github.com/ComposioHQ/awesome-codex-skills/tree/main/pr-review-ci-fix",
+    "skillUrl": "https://github.com/ComposioHQ/awesome-codex-skills/blob/main/pr-review-ci-fix/SKILL.md",
     "requires": [
       "git",
       "GitHub/GitLab access",
@@ -204,7 +204,7 @@
     "sourceName": "awesome-codex-skills",
     "sourceRepo": "https://github.com/ComposioHQ/awesome-codex-skills",
     "skillPath": "codebase-migrate",
-    "skillUrl": "https://github.com/ComposioHQ/awesome-codex-skills/tree/main/codebase-migrate",
+    "skillUrl": "https://github.com/ComposioHQ/awesome-codex-skills/blob/main/codebase-migrate/SKILL.md",
     "requires": [
       "git",
       "CI access"
@@ -250,7 +250,7 @@
     "sourceName": "awesome-codex-skills",
     "sourceRepo": "https://github.com/ComposioHQ/awesome-codex-skills",
     "skillPath": "meeting-notes-and-actions",
-    "skillUrl": "https://github.com/ComposioHQ/awesome-codex-skills/tree/main/meeting-notes-and-actions",
+    "skillUrl": "https://github.com/ComposioHQ/awesome-codex-skills/blob/main/meeting-notes-and-actions/SKILL.md",
     "requires": [],
     "risk": "low",
     "capabilities": {
@@ -293,7 +293,7 @@
     "sourceName": "awesome-codex-skills",
     "sourceRepo": "https://github.com/ComposioHQ/awesome-codex-skills",
     "skillPath": "spreadsheet-formula-helper",
-    "skillUrl": "https://github.com/ComposioHQ/awesome-codex-skills/tree/main/spreadsheet-formula-helper",
+    "skillUrl": "https://github.com/ComposioHQ/awesome-codex-skills/blob/main/spreadsheet-formula-helper/SKILL.md",
     "requires": [],
     "risk": "low",
     "capabilities": {
@@ -333,10 +333,10 @@
       "Hotspot",
       "Analysis"
     ],
-    "sourceName": "awesome-codex-skills",
-    "sourceRepo": "https://github.com/ComposioHQ/awesome-codex-skills",
-    "skillPath": "codebase-recon",
-    "skillUrl": "",
+    "sourceName": "codebase-recon-skill",
+    "sourceRepo": "https://github.com/yujiachen-y/codebase-recon-skill",
+    "skillPath": "skills/codebase-recon",
+    "skillUrl": "https://github.com/yujiachen-y/codebase-recon-skill",
     "requires": [
       "git"
     ],
@@ -381,7 +381,7 @@
     "sourceName": "awesome-codex-skills",
     "sourceRepo": "https://github.com/ComposioHQ/awesome-codex-skills",
     "skillPath": "sentry-triage",
-    "skillUrl": "https://github.com/ComposioHQ/awesome-codex-skills/tree/main/sentry-triage",
+    "skillUrl": "https://github.com/ComposioHQ/awesome-codex-skills/blob/main/sentry-triage/SKILL.md",
     "requires": [
       "Sentry access",
       "git"
@@ -427,7 +427,7 @@
     "sourceName": "awesome-codex-skills",
     "sourceRepo": "https://github.com/ComposioHQ/awesome-codex-skills",
     "skillPath": "issue-triage",
-    "skillUrl": "https://github.com/ComposioHQ/awesome-codex-skills/tree/main/issue-triage",
+    "skillUrl": "https://github.com/ComposioHQ/awesome-codex-skills/blob/main/issue-triage/SKILL.md",
     "requires": [
       "Linear or Jira access",
       "Composio CLI"
