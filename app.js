@@ -397,24 +397,16 @@ function createCard(s){
     a.href = s.skillUrl;
     a.target = '_blank';
     a.rel = 'noopener noreferrer';
-    a.className = 'btn secondary small view-skill-link';
+    a.className = 'btn secondary small';
     a.textContent = '查看 Skill';
-    a.setAttribute('data-skill-id', s.id);
-    a.style.pointerEvents = 'auto';
-    a.style.position = 'relative';
-    a.style.zIndex = '2';
     actions.appendChild(a);
   } else if(s.sourceRepo){
     const a = document.createElement('a');
     a.href = s.sourceRepo;
     a.target = '_blank';
     a.rel = 'noopener noreferrer';
-    a.className = 'btn secondary small view-skill-link';
+    a.className = 'btn secondary small';
     a.textContent = '查看來源';
-    a.setAttribute('data-skill-id', s.id);
-    a.style.pointerEvents = 'auto';
-    a.style.position = 'relative';
-    a.style.zIndex = '2';
     actions.appendChild(a);
   }
 
